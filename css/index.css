@@ -1,0 +1,195 @@
+body {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+        "main  aside"
+        "foot  foot";
+    column-gap: 30px;
+    padding-top: 110px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+main   { grid-area: main; }
+aside  { grid-area: aside; }
+footer { grid-area: foot; }
+
+main > p:first-child {
+    float: right;
+    margin: 0 0 15px 20px;
+    padding: 10px 15px;
+    border-left: 3px solid darkorange;
+    background-color: white;
+}
+
+a[href^="#"] {
+    color: #b35f00;
+    font-weight: 700;
+}
+
+#mission {
+    margin: 40px 20px;
+    padding: 0;
+}
+
+#mission > p:first-of-type::after {
+    content: " 👨‍💼";
+    font-size: 1.4em;
+}
+
+#mission h3 + ol {
+    margin: 10px 0 15px 30px;
+}
+
+#mission li::marker {
+    color: darkorange;
+    font-weight: 700;
+}
+
+#mission h3 ~ p {
+    padding-left: 10px;
+    border-left: 2px solid #ccc;
+}
+
+#mission em {
+    color: darkorange;
+}
+
+#founders {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.4s ease;
+}
+
+#founders:hover {
+    transform: scale(1.05);
+    z-index: 5;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+caption {
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+th, td {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: hsl(30, 30%, 96%);
+}
+
+article {
+    margin-top: 30px;
+    max-height: 170px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+article::-webkit-scrollbar {
+    width: 8px;
+}
+
+article::-webkit-scrollbar-track {
+    background-color: #eee;
+}
+
+article::-webkit-scrollbar-thumb {
+    background-color: darkorange;
+    border-radius: 4px;
+}
+
+article p:first-of-type::first-letter {
+    font-size: 2em;
+    font-weight: 700;
+    color: darkorange;
+}
+
+a[href*="wikipedia"] {
+    color: steelblue;
+}
+
+a[target]::after {
+    content: " ↗";
+}
+
+aside {
+    position: sticky;
+    top: 20px;
+    align-self: start;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-top: 3px solid darkorange;
+}
+
+aside li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+aside ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+address {
+    font-style: normal;
+    transition: text-shadow 0.5s ease 2s;
+}
+
+address:hover {
+    text-shadow: 2px 2px 4px darkorange;
+}
+
+@media (max-width: 800px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "main"
+            "aside"
+            "foot";
+        padding-top: 180px;
+    }
+
+    header {
+        flex-direction: column;
+    }
+}
+
+header h1 {
+    font-weight: 600;
+}
+
+.title {
+    max-width: 480px;
+}
+
+#notice {
+    min-height: 3.2em;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 900;
+    line-height: 1.6;
+    color: red;
+}

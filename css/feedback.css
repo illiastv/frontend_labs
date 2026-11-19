@@ -1,0 +1,129 @@
+main > h2 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+fieldset {
+    order: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    padding: 15px 20px;
+    border: 2px solid darkorange;
+}
+
+legend {
+    padding: 0 10px;
+}
+
+fieldset p {
+    margin-bottom: 10px;
+}
+
+.field-purpose {
+    order: 2;
+    flex: 1 1 250px;
+    align-self: flex-start;
+}
+
+.field-details {
+    order: 3;
+    flex: 2 1 350px;
+    align-self: stretch;
+}
+
+.field-consent {
+    order: 4;
+    flex-basis: 100%;
+}
+
+.field-actions {
+    order: 5;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-self: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: darkorange;
+    box-shadow: 0 0 6px rgba(255, 140, 0, 0.5);
+}
+
+textarea {
+    resize: vertical;
+}
+
+::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+input[type="radio"]:checked + label {
+    font-weight: 700;
+    color: #b35f00;
+}
+
+button {
+    padding: 10px 30px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    border: 2px solid #1a1a1a;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+button[type="submit"] {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+button[type="reset"] {
+    background-color: white;
+    color: #1a1a1a;
+}
+
+button:hover {
+    background-color: darkorange;
+    color: white;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+footer {
+    margin-top: 30px;
+}

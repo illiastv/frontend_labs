@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palantir - Зворотній зв'язок</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/feedback.css">
+    <link rel="stylesheet" href="css/lab4.css">
+    <script src="js/script.js" defer></script>
+
+    <style>
+
+        legend {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="assets/palantir_logo.png" alt="Логотип Palantir" width="300" height="180">
+        <h1>Palantir Technologies</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна сторінка</a></li>
+                <li><a href="directions.html">Напрями діяльності</a></li>
+                <li><a href="feedback.html">Зворотній зв'язок</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Зворотній зв'язок</h2>
+
+        <form action="#" method="post">
+
+            <fieldset>
+                <legend>Персональна інформація</legend>
+
+                <p>
+                    <label for="fullname">Прізвище та ім'я:</label><br>
+                    <input type="text" id="fullname" name="fullname" placeholder="Ілля Ілленко" required>
+                </p>
+
+                <p>
+                    <label for="email">E-mail:</label><br>
+                    <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                </p>
+
+                <p>
+                    <label for="age">Вік:</label><br>
+                    <input type="number" id="age" name="age" min="14" max="100" required>
+                </p>
+
+                <p>Освіта:</p>
+                <p>
+                    <input type="radio" id="edu-full" name="education" value="full" required>
+                    <label for="edu-full">Повна</label><br>
+
+                    <input type="radio" id="edu-incomplete" name="education" value="incomplete">
+                    <label for="edu-incomplete">Неповна</label><br>
+
+                    <input type="radio" id="edu-higher" name="education" value="higher">
+                    <label for="edu-higher">Вища</label><br>
+
+                    <input type="radio" id="edu-professional" name="education" value="professional">
+                    <label for="edu-professional">Професійна</label>
+                </p>
+            </fieldset>
+
+            <p class="field-purpose">
+                <label for="purpose">Мета зворотнього зв'язку:</label><br>
+                <select id="purpose" name="purpose" required>
+                    <option value="">-- оберіть --</option>
+                    <option value="cooperation">Співпраця</option>
+                    <option value="ip-complaint">Скарга на порушення права власності</option>
+                    <option value="proposal">Пропозиція</option>
+                    <option value="bug">Наявність помилки</option>
+                </select>
+            </p>
+
+            <p class="field-details">
+                <label for="details">Детально:</label><br>
+                <textarea id="details" name="details" rows="6" cols="50" maxlength="500"
+                          placeholder="Не більше 500 символів"></textarea>
+            </p>
+
+            <p class="field-consent">
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">Я погоджуюсь на обробку персональних даних</label>
+            </p>
+
+            <p class="field-actions">
+                <button type="submit">Надіслати</button>
+                <button type="reset">Очистити</button>
+            </p>
+
+        </form>
+    </main>
+
+    <footer>
+        <address>
+            Адреса: 1200 17th Street, Floor 15, Denver, CO 80202, USA<br>
+            Телефон: +1 (000) 000-00-00
+        </address>
+    </footer>
+
+</body>
+</html>

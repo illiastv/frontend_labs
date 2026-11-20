@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 100%;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background-color: rgb(245, 245, 243);
+}
+
+h1, h2, h3, legend, caption {
+    font-family: "Montserrat", "Trebuchet MS", sans-serif;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    padding: 0.6rem 2.5rem;
+    background: -webkit-linear-gradient(left, white, hsl(30, 20%, 94%));
+    background: linear-gradient(to right, white, hsl(30, 20%, 94%));
+    border-bottom: 3px solid darkorange;
+}
+
+header > img {
+    width: 7.5rem;
+    height: auto;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.125em;
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    gap: 0.6rem;
+    list-style-type: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.5rem 0.9rem;
+    color: #1a1a1a;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: darkorange;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-color: #b35f00;
+}
+
+nav a:focus {
+    outline: 2px dashed darkorange;
+}
+
+main {
+    padding: 1.25rem 2.5rem;
+}
+
+footer {
+    padding: 1.25rem 2.5rem;
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+}
+
+::-moz-selection {
+    background-color: darkorange;
+    color: white;
+}
+
+::selection {
+    background-color: darkorange;
+    color: white;
+}
+
+nav, main, article, aside, section, footer, figure, figcaption, address {
+    display: block;
+}

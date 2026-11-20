@@ -1,0 +1,121 @@
+body {
+    padding-top: 7rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+main > h2 {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+article {
+    border: 6px double #cc5500;
+    border-right: medium solid #cc5500;
+    padding: 20px;
+    background-color: white;
+    align-self: stretch;
+    justify-self: stretch;
+}
+
+article h3::before {
+    content: "▸ ";
+    color: #cc5500;
+}
+
+figure {
+    margin: 15px 0;
+}
+
+article img {
+    display: block;
+    width: 100%;
+    height: 14rem;
+    -o-object-fit: cover;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+@keyframes saturate-up {
+    from {
+        filter: saturate(100%);
+    }
+    to {
+        filter: saturate(200%);
+    }
+}
+
+article img:focus {
+    animation-name: saturate-up;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    outline: 3px solid darkorange;
+}
+
+.gov {
+    font-weight: 300;
+    font-size: 0.85em;
+    font-style: italic;
+    color: #555;
+}
+
+a:active {
+    color: darkgreen;
+}
+
+nav a:active {
+    color: darkgreen;
+    background-color: white;
+}
+
+main > form {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+button {
+    padding: 10px 25px;
+    font-family: "Montserrat", sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: darkorange;
+}
+
+@media (max-width: 800px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    body {
+        padding-top: 11rem;
+    }
+
+    header {
+        flex-direction: column;
+    }
+}

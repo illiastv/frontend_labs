@@ -1,0 +1,111 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+    header {
+        padding: 0.6rem 1.25rem;
+    }
+
+    main,
+    footer {
+        padding: 1.25rem;
+    }
+
+    header h1 {
+        font-size: 1.25rem;
+        letter-spacing: 0.08em;
+    }
+}
+
+@media (max-width: 800px) {
+    header {
+        position: static;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    body {
+        display: block;
+        padding-top: 0;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .title {
+        max-width: 100%;
+    }
+
+    aside {
+        position: static;
+    }
+}
+
+@media (max-width: 576px) {
+    main,
+    footer {
+        padding: 1rem 0.75rem;
+    }
+
+    header h1 {
+        font-size: 1.05rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    form {
+        padding: 1rem;
+    }
+
+    fieldset,
+    .field-purpose,
+    .field-details {
+        flex-basis: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .tooltip {
+        position: static;
+        width: auto;
+        margin: 0.4rem 0 0;
+    }
+
+    .modal-box {
+        padding: 1rem;
+    }
+
+    #founders:hover {
+        transform: none;
+    }
+}
+
+@media (hover: none) {
+    #founders:hover {
+        transform: none;
+    }
+}
+
+@media (min-width: 1600px) {
+    body {
+        font-size: 112.5%;
+    }
+}
